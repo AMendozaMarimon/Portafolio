@@ -30,7 +30,7 @@ export default function MainHome() {
         className="flex items-center justify-center absolute top-10 right-10 gap-2"
         data-aos="flip-down"
       >
-        <IoLanguageSharp className="relative text-3xl" />
+        <IoLanguageSharp className="relative text-3xl transition-transform duration-300 transform hover:scale-125" />
         {/* Circulo de notificación */}
         <div className="absolute top-0 right-0 w-3 h-3 rounded-full bg-pinkMain animate-ping"></div>
       </button>

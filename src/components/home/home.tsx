@@ -31,6 +31,7 @@ export default function Home() {
         <p
           className="text-2xl text-grayText font-telegraf text-center text-balance"
           style={{ whiteSpace: "pre-line" }}
+          data-aos="zoom-im"
         >
           "<span className="font-bold">{content?.text.textBold}</span>{" "}
           <span>{content?.text.textNotBold}</span>{" "}
