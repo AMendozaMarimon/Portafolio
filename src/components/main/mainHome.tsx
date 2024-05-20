@@ -48,7 +48,7 @@ export default function MainHome() {
       </div>
       {/* Botón para el Scroll */}
       <button className="absolute p-5 rounded-full bg-white shadow-xl border-2 border-black bottom-16 animate-bounce">
-        <Link to="home" spy={true} smooth={true} duration={500}>
+        <Link to="phrase" spy={true} smooth={true} duration={500}>
           <FaArrowDownLong />
         </Link>
       </button>

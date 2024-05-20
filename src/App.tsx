@@ -1,5 +1,6 @@
-import Home from "./components/home/home";
+import Phrase from "./components/phrase/phrase";
 import MainHome from "./components/main/mainHome";
+import About from "./components/about/about";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         }
       `}</style>
       <MainHome />
-      <Home />
+      <Phrase />
+      <About />
     </>
   );
 }

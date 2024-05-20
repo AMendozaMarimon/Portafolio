@@ -7,7 +7,7 @@ interface AppState {
   idiom: keyof typeof ContentTexts;
 }
 
-export default function Home() {
+export default function Phrase() {
   // Accedo al idioma del store
   const idiom = useSelector((state: AppState) => state.idiom);
 
@@ -16,12 +16,12 @@ export default function Home() {
 
   return (
     <section
-      id="home"
-      className="w-full relative h-auto flex justify-center items-center bg-grayMain p-14 mb-48"
+      id="phrase"
+      className="w-full relative h-auto flex justify-center items-center bg-grayMain p-14"
     >
       {/* Img de fondo */}
       <div
-        className="absolute w-[4rem] bottom-[-26%] left-[20%]"
+        className="absolute w-[4rem] bottom-[-19%] md:bottom-[-25%] left-[20%]"
         data-aos="flip-down"
       >
         <img src={star} alt="Star" draggable="false" loading="lazy" />

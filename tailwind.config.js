@@ -5,8 +5,11 @@ export default {
     extend: {
       colors: {
         pinkMain: "#F89AC0",
-        grayMain: "#E9E9E9",
-        grayText: "#969696"
+        grayMain: "#F4F4F4",
+        grayText: "#969696",
+        orangeBoton: "#F9D070",
+        colorLinkedIn: "#016295",
+        colorWhatsApp: "#5ACF67",
       },
       fontFamily: {
         telegraf: ["Telegraf", "sans-serif"],
