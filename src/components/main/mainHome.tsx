@@ -55,11 +55,11 @@ export default function MainHome() {
       {/* Contenido */}
       <div className="w-3/4 text-center text-balance">
         <h1 className="font-telegraf text-5xl md:text-7xl lg:text-8xl xl:text-8xl">
-          <span className="font-bold">{content.title.textBold}</span>{" "}
-          <span className="italic">{content.title.textNormal}</span>{" "}
-          <span className="font-bold">{content.title.textBold2}</span>{" "}
-          {content.title.textNormal2}{" "}
-          <span className="font-bold">{content.title.textBold3}</span>
+          <span className="font-bold">{content?.title.textBold}</span>{" "}
+          <span className="italic">{content?.title.textNormal}</span>{" "}
+          <span className="font-bold">{content?.title.textBold2}</span>{" "}
+          {content?.title.textNormal2}{" "}
+          <span className="font-bold">{content?.title.textBold3}</span>
         </h1>
       </div>
     </section>
