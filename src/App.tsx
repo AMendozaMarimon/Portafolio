@@ -1,11 +1,13 @@
-import './App.css'
+import Home from "./components/home/home"
+import MainHome from "./components/main/mainHome" 
 
 function App() {
 
   return (
-      <div>
-        <h1>Vite + React</h1>
-      </div>
+    <>
+      <MainHome />
+      <Home />
+    </>
   )
 }
 
