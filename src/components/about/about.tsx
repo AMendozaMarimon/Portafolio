@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import { useEffect } from 'react';
 import { GrDownload } from "react-icons/gr";
 import { DonwloadPDFNotification } from "../../assets/alerts/alerts";
 import { FaGithub } from "react-icons/fa";
@@ -8,10 +7,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import img from "../../assets/imgs/lineS.webp";
 import Cv from "../../assets/Cv/Aimar_FD_CV.pdf";
 import ContentTexts from "./contentTexts";
-import tippy from 'tippy.js';
 
-import 'tippy.js/dist/tippy.css'; 
-
+// Define el tipo del estado
 interface AppState {
   idiom: keyof typeof ContentTexts;
 }
@@ -22,21 +19,6 @@ export default function About() {
 
   // Accedo al contenido del idioma
   const content = ContentTexts[idiom];
-  
-  // Opciones para el tooltip
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const tooltipOptions = {
-    content: `${content?.textTool}`,
-    placement: 'top',
-    arrow: true, // Flecha del tooltip
-    animation: 'scale', // Animación del tooltip
-    duration: 300, // Duración de la animación
-  };
-
-    useEffect(() => {
-    // Inicializar tooltip solo para el enlace de WhatsApp
-    tippy('#whatsapp', tooltipOptions);
-  }, [tooltipOptions]); // Ejecutar solo una vez al montar el componente
 
   return (
     <section className="w-full h-auto flex flex-col lg:flex-row items-center justify-center px-11 md:px-24 lg:justify-between gap-20 py-32">
@@ -85,7 +67,6 @@ export default function About() {
           </a>
           <a
             href="https://walink.co/c99d31"
-            id="whatsapp"
             target="_blank"
             className="relative transition-colors transition-transform duration-300 hover:text-colorWhatsApp hover:scale-125"
           >

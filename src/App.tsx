@@ -1,6 +1,7 @@
 import Phrase from "./components/phrase/phrase";
 import MainHome from "./components/main/mainHome";
 import About from "./components/about/about";
+import Skills from "./components/skills/skills";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <MainHome />
       <Phrase />
       <About />
+      <Skills />
     </>
   );
 }
