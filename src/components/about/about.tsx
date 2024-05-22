@@ -11,50 +11,54 @@ import ContentTexts from "./contentTexts";
 // Define el tipo del estado
 interface AppState {
   idiom: keyof typeof ContentTexts;
+  darkMode: boolean;
 }
 
 export default function About() {
   // Accedo al idioma del store
   const idiom = useSelector((state: AppState) => state.idiom);
 
+  // Accedo al estado de darkMode
+  const darkMode = useSelector((state: AppState) => state.darkMode);
+
   // Accedo al contenido del idioma
   const content = ContentTexts[idiom];
 
   return (
-    <section className="w-full h-auto flex flex-col lg:flex-row items-center justify-center px-11 md:px-24 lg:justify-between gap-20 py-32">
+    <section className={`w-full h-auto flex flex-col lg:flex-row items-center justify-center px-11 md:px-24 lg:justify-between gap-20 py-32 ${darkMode ? "dark" : ""} dark:bg-gray-800 transition-colors duration-200`}>
       {/* Contenido */}
       <div className="w-full lg:w-1/2">
         {/* Nombre */}
         <h2 className="text-5xl font-telegraf text-center mb-5 text-balance lg:text-left lg:text-6xl">
-          <span className="">Aimar</span>
+          <span className="dark:text-white">Aimar</span>
           <br />
           <span className="italic text-pinkMain font-bold">Mendoza</span>
         </h2>
         {/* Título */}
-        <p className="text-2xl font-telegraf text-center mb-12 lg:text-left">
+        <p className="text-2xl font-telegraf text-center mb-12 lg:text-left dark:text-white">
           {content?.text}
         </p>
         {/* Descripción */}
-        <p className="font-garet text-justify text-lg mb-12">
+        <p className="font-garet text-justify text-lg mb-12 dark:text-white">
           {content?.text2}
         </p>
         {/* Botón de Curriculum */}
         <div className="flex items-center justify-center lg:justify-start mb-20">
           <a href={Cv} target="_blank" download={DonwloadPDFNotification}>
-            <button className="flex items-center justify-center gap-3 border-2 border-black font-telegraf text-lg font-bold px-5 py-2 rounded-full transition-colors hover:bg-orangeBoton hover:animate-spin">
+            <button className="flex items-center justify-center gap-3 border-2 border-black font-telegraf text-lg font-bold px-5 py-2 rounded-full transition-colors hover:bg-orangeBoton hover:animate-spin dark:bg-gray-700 dark:border-textDark dark:text-textDark">
               <>
-                <GrDownload />
+                <GrDownload className="dark:text-textDark"/>
                 {content?.textDownload}
               </>
             </button>
           </a>
         </div>
         {/* Redes sociales */}
-        <div className="flex justify-center items-center gap-10 lg:justify-start">
+        <div className="flex justify-center items-center gap-10 lg:justify-start dark:text-textDark">
           <a
             href="https://github.com/AMendozaMarimon"
             target="_blank"
-            className="transition-transform duration-300 hover:scale-125"
+            className="transition-transform duration-300 hover:scale-125 hover:text-black"
           >
             <FaGithub className="text-3xl" />
           </a>
@@ -63,7 +67,7 @@ export default function About() {
             target="_blank"
             className="transition-colors transition-transform duration-300 hover:text-colorLinkedIn hover:scale-125"
           >
-            <FaLinkedinIn className="text-3xl"/>
+            <FaLinkedinIn className="text-3xl" />
           </a>
           <a
             href="https://walink.co/c99d31"
@@ -78,8 +82,11 @@ export default function About() {
         </div>
       </div>
       {/* Imagen personal */}
-      <div className="w-full flex justify-center align-center lg:w-1/2" data-aos="flip-right">
-        <img 
+      <div
+        className="w-full flex justify-center align-center lg:w-1/2"
+        data-aos="flip-right"
+      >
+        <img
           className="w-3/4"
           src={img}
           alt="Aimar Mendoza"

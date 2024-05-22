@@ -10,12 +10,24 @@ import { SiExpress } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaGitAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-
 import Contact from "../../assets/imgs/Contact.webp";
+import { useSelector } from "react-redux";
+
+// Define el tipo del estado
+interface AppState {
+  darkMode: boolean;
+}
 
 export default function Skills() {
+  // Accedo al estado de darkMode
+  const darkMode = useSelector((state: AppState) => state.darkMode);
+
   return (
-    <section className="w-full relative h-auto flex justify-center items-center bg-grayMain px-11 md:px-24 mb-40 py-14">
+    <section
+      className={`w-full relative h-auto flex justify-center items-center bg-grayMain px-11 md:px-24 mb-40 py-14 ${
+        darkMode ? "dark" : ""
+      } dark:bg-gray-700 transition-colors duration-200`}
+    >
       {/* Img de fondo */}
       <div
         className="absolute w-[8rem] top-[-15%] md:top-[-15%] right-[10%]"
@@ -24,7 +36,7 @@ export default function Skills() {
         <img src={Contact} alt="Star" draggable="false" loading="lazy" />
       </div>
       {/* Iconos de habilidades */}
-      <div className="flex flex-wrap justify-center items-center gap-6 text-4xl text-grayText md:gap-10">
+      <div className="flex flex-wrap justify-center items-center gap-6 text-4xl text-grayText md:gap-10 dark:text-white">
         <IoLogoJavascript
           className="transition-transform duration-300 transform hover:scale-125 hover:text-colorJavascript"
           title="JavaScript"

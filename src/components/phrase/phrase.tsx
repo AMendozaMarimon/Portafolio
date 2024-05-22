@@ -5,11 +5,15 @@ import star from "../../assets/imgs/star.webp";
 // Define el tipo del estado
 interface AppState {
   idiom: keyof typeof ContentTexts;
+  darkMode: boolean;
 }
 
 export default function Phrase() {
   // Accedo al idioma del store
   const idiom = useSelector((state: AppState) => state.idiom);
+
+  // Accedo al estado de darkMode
+  const darkMode = useSelector((state: AppState) => state.darkMode);
 
   // Accedo al contenido del idioma
   const content = ContentTexts[idiom];
@@ -17,7 +21,9 @@ export default function Phrase() {
   return (
     <section
       id="phrase"
-      className="w-full relative h-auto flex justify-center items-center bg-grayMain p-14"
+      className={`w-full relative h-auto flex justify-center items-center bg-grayMain p-14 ${
+        darkMode ? "dark" : ""
+      } dark:bg-gray-700 transition-colors duration-200`}
     >
       {/* Img de fondo */}
       <div
@@ -29,7 +35,7 @@ export default function Phrase() {
       {/* Texto o Frase */}
       <div className="flex flex-col justify-center items-center">
         <p
-          className="text-2xl text-grayText font-telegraf text-center text-balance"
+          className="text-2xl text-grayText font-telegraf text-center text-balance dark:text-white"
           style={{ whiteSpace: "pre-line" }}
           data-aos="zoom-im"
         >

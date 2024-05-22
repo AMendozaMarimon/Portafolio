@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -20,6 +21,7 @@ export default {
         colorNode: "#339933",
         colorPostgresql: "#33658F",
         colorGit: "#F14E32",
+        textDark: "#34ADE3",
       },
       fontFamily: {
         telegraf: ["Telegraf", "sans-serif"],
