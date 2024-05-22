@@ -9,6 +9,7 @@ import { FaNode } from "react-icons/fa6";
 import { SiExpress } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaGitAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 import Contact from "../../assets/imgs/Contact.webp";
 
@@ -67,6 +68,10 @@ export default function Skills() {
         <FaGitAlt
           className="transition-transform duration-300 transform hover:scale-125 hover:text-colorGit"
           title="Git"
+        />
+        <FaGithub
+          className="transition-transform duration-300 transform hover:scale-125 hover:text-black"
+          title="Github"
         />
       </div>
     </section>
