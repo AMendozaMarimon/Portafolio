@@ -25,7 +25,7 @@ export default function About() {
   const content = ContentTexts[idiom];
 
   return (
-    <section className={`w-full h-auto flex flex-col lg:flex-row items-center justify-center px-11 md:px-24 lg:justify-between gap-20 py-32 ${darkMode ? "dark" : ""} dark:bg-gray-800 transition-colors duration-200`}>
+    <section className={`w-full h-auto flex flex-col lg:flex-row items-center justify-center px-11 py-32 md:px-24 lg:justify-between gap-20  ${darkMode ? "dark" : ""} dark:bg-gray-800 transition-colors duration-200`}>
       {/* Contenido */}
       <div className="w-full lg:w-1/2">
         {/* Nombre */}
