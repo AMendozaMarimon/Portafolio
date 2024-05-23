@@ -2,6 +2,7 @@ import Phrase from "./components/phrase/phrase";
 import MainHome from "./components/main/mainHome";
 import About from "./components/about/about";
 import Skills from "./components/skills/skills";
+import Projects from "./components/projects/projects";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Phrase />
       <About />
       <Skills />
+      <Projects />
     </>
   );
 }

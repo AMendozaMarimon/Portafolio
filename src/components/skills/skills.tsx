@@ -24,7 +24,7 @@ export default function Skills() {
 
   return (
     <section
-      className={`w-full relative h-auto flex justify-center items-center bg-grayMain px-11 md:px-24 mb-40 py-14 ${
+      className={`w-full relative h-auto flex justify-center items-center bg-grayMain px-11 md:px-24 py-14 ${
         darkMode ? "dark" : ""
       } dark:bg-gray-700 transition-colors duration-200`}
     >
