@@ -3,6 +3,7 @@ import MainHome from "./components/main/mainHome";
 import About from "./components/about/about";
 import Skills from "./components/skills/skills";
 import Projects from "./components/projects/projects";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Footer />
     </>
   );
 }

@@ -414,22 +414,7 @@ export default function Projects() {
           className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
           data-aos="fade-up"
         >
-          {/* Icono de Henry */}
           <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
-            <a
-              href="https://www.linkedin.com/posts/aimar-mendoza_fullstackdeveloper-graduaciaejn-desarrolloweb-activity-7113643813323075584-T4PH?utm_source=share&utm_medium=member_desktop"
-              target="_blank"
-            >
-              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
-                <img
-                  className="w-7 h-7 rounded-full object-cover"
-                  src={HenryLogo}
-                  alt={HenryLogo}
-                  draggable="false"
-                  loading="lazy"
-                />
-              </button>
-            </a>
             {/* Icono de GitHub */}
             <a
               href="https://github.com/AMendozaMarimon/My-Portfolio"
