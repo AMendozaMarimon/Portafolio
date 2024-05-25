@@ -8,13 +8,6 @@ import Footer from "./components/footer/footer";
 function App() {
   return (
     <>
-      {" "}
-      <style jsx global>{`
-        ::selection {
-          background-color: #ffcc00;
-          color: #ffffff;
-        }
-      `}</style>
       <MainHome />
       <Phrase />
       <About />
