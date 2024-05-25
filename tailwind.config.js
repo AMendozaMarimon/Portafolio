@@ -10,6 +10,7 @@ export default {
         grayText: "#969696",
         orangeBoton: "#F9D070",
         colorLinkedIn: "#016295",
+        colorGmail: "#EB493B",
         colorWhatsApp: "#5ACF67",
         colorJavascript: "#EFD81D",
         colorTypescript: "#3178C6",

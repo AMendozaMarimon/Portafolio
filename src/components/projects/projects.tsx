@@ -1,13 +1,28 @@
 import { useSelector } from "react-redux";
 import ContentTexts from "./contentTexts";
 import Congress from "../../assets/imgs/Congress.webp";
+import AwaqLogo from "../../assets/imgs/AwaqLogo.webp";
+import HenryLogo from "../../assets/imgs/Henry.webp";
+import CatBio from "../../assets/imgs/CatBio.webp";
+import VehiBuy from "../../assets/imgs/VehiBuy.webp";
+import food from "../../assets/imgs/food..webp";
+import RaM from "../../assets/imgs/RaM.webp";
+import Ant_Port from "../../assets/imgs/Ant_PortFolio.webp";
+import NewP from "../../assets/imgs/NewP.webp";
 import { FaGithub } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
+import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa";
+import { IoLogoCss3 } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaGitAlt } from "react-icons/fa";
 import { DiReact } from "react-icons/di";
+import { SiRedux } from "react-icons/si";
+import { FaNode } from "react-icons/fa6";
+import { SiExpress } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaGitAlt } from "react-icons/fa";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { BsFillLightningChargeFill } from "react-icons/bs";
 
 // Define el tipo del estado
 interface AppState {
@@ -52,12 +67,20 @@ export default function Projects() {
           className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
           data-aos="fade-up"
         >
-          {/* Icono de Github */}
-          {/* <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
-            <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
-              <FaGithub className="text-3xl" />
-            </button>
-          </div> */}
+          {/* Icono de Awaq */}
+          <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
+            <a href="https://es.linkedin.com/company/awaq-ongd" target="_blank">
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <img
+                  className="w-7 h-7 rounded-full"
+                  src={AwaqLogo}
+                  alt={AwaqLogo}
+                  draggable="false"
+                  loading="lazy"
+                />
+              </button>
+            </a>
+          </div>
           {/* Imagen de Congress */}
           <div className="w-full h-[15rem] bg-grayMain dark:bg-gray-700 overflow-hidden">
             <img
@@ -80,6 +103,7 @@ export default function Projects() {
                 <FaHtml5 className="hover:text-colorHTML" />
                 <RiTailwindCssFill className="hover:text-colorTailwind" />
                 <FaGitAlt className="hover:text-colorGit" />
+                <FaGithub className="hover:text-black" />
               </div>
               {/* Boton de reedirigir */}
               <a href="https://congreso.somosawaq.org/" target="_blank">
@@ -90,83 +114,362 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        {/* Card Congress */}
+        {/* --------- Card Nuevo Portafolio --------- */}
         <div
-          className="relative w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
+          className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
           data-aos="fade-up"
         >
-          {/* Icono de Github */}
+          {/* Icono de GitHub */}
           <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
-            <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
-              <FaGithub className="text-3xl" />
-            </button>
+            <a
+              href="https://github.com/AMendozaMarimon/Portafolio"
+              target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <FaGithub className="w-7 h-7" />
+              </button>
+            </a>
           </div>
-          {/* Imagen de Congress */}
-          <div className="w-full h-[15rem] relative bg-grayMain dark:bg-gray-700">
+          {/* Imagen de Nuevo Portafolio */}
+          <div className="w-full h-[15rem] bg-grayMain dark:bg-gray-700 overflow-hidden">
             <img
-              className="absolute w-4/5 h-auto right-[-20%] top-[10%] shadow-lg rounded-lg"
-              src={Congress}
-              alt="Congress..."
+              className="w-full h-full object-cover object-top"
+              src={NewP}
+              alt="NewP..."
               draggable="false"
               loading="lazy"
             />
           </div>
-          {/* Texto de Congress */}
+          {/* Texto de Nuevo Portafolio */}
           <div className="p-7 bg-white dark:bg-gray-800">
-            <p className="font-telegraf text-xl text-center text-balance lg:text-left dark:text-textDark">
-              {content?.cardCongress.title}
+            <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark pb-5">
+              {content?.cardNewP.title}
+            </p>
+            {/* Alerta de Estado */}
+            <p className="flex items-center gap-2 font-garet font-bold italic text-colorWhatsApp">
+            <div className="w-2 h-2 rounded-full bg-colorWhatsApp animate-ping"></div>
+              {content?.cardNewP.state}
             </p>
             <div className="flex justify-between items-center pt-5">
               <div className="flex justify-center items-center gap-3 text-2xl text-grayText dark:gray-700">
                 <BiLogoTypescript className="hover:text-colorTypescript" />
+                <DiReact className="hover:text-colorReact" />
+                <SiRedux className="hover:text-colorRedux" />
                 <FaHtml5 className="hover:text-colorHTML" />
                 <RiTailwindCssFill className="hover:text-colorTailwind" />
                 <FaGitAlt className="hover:text-colorGit" />
+                <FaGithub className="hover:text-black" />
               </div>
               {/* Boton de reedirigir */}
-              <button className="bg-white p-2 rounded-full border-2 border-black transition duration-300 ease-in-out hover:bg-orangeBoton dark:border-orangeBoton dark:bg-gray-700 dark:hover:bg-orangeBoton dark:text-white dark:hover:text-gray-800">
-                <MdOutlineArrowOutward className="text-2xl" />
-              </button>
+              {/* <a href="https://congreso.somosawaq.org/" target="_blank">
+                <button className="bg-white p-2 rounded-full border-2 border-black transition duration-300 ease-in-out hover:bg-orangeBoton dark:border-orangeBoton dark:bg-gray-700 dark:hover:bg-orangeBoton dark:text-white dark:hover:text-gray-800">
+                  <MdOutlineArrowOutward className="text-2xl" />
+                </button>
+              </a> */}
             </div>
           </div>
         </div>
-        {/* Card Congress */}
+        {/* --------- Card Catálogo Bio --------- */}
         <div
-          className="relative w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
+          className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
           data-aos="fade-up"
         >
-          {/* Icono de Github */}
+          {/* Icono de Awaq */}
           <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
-            <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
-              <FaGithub className="text-3xl" />
-            </button>
+            <a href="https://es.linkedin.com/company/awaq-ongd" target="_blank">
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <img
+                  className="w-7 h-7 rounded-full"
+                  src={AwaqLogo}
+                  alt={AwaqLogo}
+                  draggable="false"
+                  loading="lazy"
+                />
+              </button>
+            </a>
           </div>
-          {/* Imagen de Congress */}
-          <div className="w-full h-[15rem] relative bg-grayMain dark:bg-gray-700">
+          {/* Imagen de CatBio */}
+          <div className="w-full h-[15rem] bg-grayMain dark:bg-gray-700 overflow-hidden">
             <img
-              className="absolute w-4/5 h-auto right-[-20%] top-[10%] shadow-lg rounded-lg"
-              src={Congress}
-              alt="Congress..."
+              className="w-full h-full object-cover object-top"
+              src={CatBio}
+              alt="CatBio..."
               draggable="false"
               loading="lazy"
             />
           </div>
-          {/* Texto de Congress */}
+          {/* Texto de CatBio */}
           <div className="p-7 bg-white dark:bg-gray-800">
-            <p className="font-telegraf text-xl text-center text-balance lg:text-left dark:text-textDark">
-              {content?.cardCongress.title}
+            <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark pb-5">
+              {content?.cardCatBio.title}
             </p>
-            <div className="flex justify-between items-center pt-5">
+            {/* Alerta de Desarrollo */}
+            <p className="flex items-center gap-2 font-garet font-bold italic text-pinkMain  dark:text-orangeBoton">
+              <BsFillLightningChargeFill />
+              {content?.cardCatBio.inProcess}
+            </p>
+            <div className="flex justify-between items-center pt-6">
               <div className="flex justify-center items-center gap-3 text-2xl text-grayText dark:gray-700">
                 <BiLogoTypescript className="hover:text-colorTypescript" />
+                <DiReact className="hover:text-colorReact" />
+                <SiRedux className="hover:text-colorRedux" />
                 <FaHtml5 className="hover:text-colorHTML" />
                 <RiTailwindCssFill className="hover:text-colorTailwind" />
                 <FaGitAlt className="hover:text-colorGit" />
+                <FaGithub className="hover:text-black" />
               </div>
               {/* Boton de reedirigir */}
-              <button className="bg-white p-2 rounded-full border-2 border-black transition duration-300 ease-in-out hover:bg-orangeBoton dark:border-orangeBoton dark:bg-gray-700 dark:hover:bg-orangeBoton dark:text-white dark:hover:text-gray-800">
-                <MdOutlineArrowOutward className="text-2xl" />
+              {/* <a href="https://congreso.somosawaq.org/" target="_blank">
+                <button className="bg-white p-2 rounded-full border-2 border-black transition duration-300 ease-in-out hover:bg-orangeBoton dark:border-orangeBoton dark:bg-gray-700 dark:hover:bg-orangeBoton dark:text-white dark:hover:text-gray-800">
+                  <MdOutlineArrowOutward className="text-2xl" />
+                </button>
+              </a> */}
+            </div>
+          </div>
+        </div>
+        {/* --------- Card E-Commerce VehiBuy --------- */}
+        <div
+          className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
+          data-aos="fade-up"
+        >
+          {/* Icono de Henry */}
+          <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
+            <a
+              href="https://www.linkedin.com/posts/aimar-mendoza_fullstackdeveloper-graduaciaejn-desarrolloweb-activity-7113643813323075584-T4PH?utm_source=share&utm_medium=member_desktop"
+              target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <img
+                  className="w-7 h-7 rounded-full object-cover"
+                  src={HenryLogo}
+                  alt={HenryLogo}
+                  draggable="false"
+                  loading="lazy"
+                />
               </button>
+            </a>
+            {/* Icono de GitHub */}
+            <a
+              href="https://github.com/GeroPazPapa1/Proyecto-Final-De-La-Graduacion"
+              target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <FaGithub className="w-7 h-7" />
+              </button>
+            </a>
+          </div>
+          {/* Imagen de VehiBuy */}
+          <div className="w-full h-[15rem] bg-grayMain dark:bg-gray-700 overflow-hidden">
+            <img
+              className="w-full h-full object-cover object-top"
+              src={VehiBuy}
+              alt="VehiBuy..."
+              draggable="false"
+              loading="lazy"
+            />
+          </div>
+          {/* Texto de VehiBuy */}
+          <div className="p-7 bg-white dark:bg-gray-800">
+            <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark">
+              {content?.cardVehi.title}
+            </p>
+            <div className="flex justify-between items-center pt-6">
+              <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
+                <IoLogoJavascript className="hover:text-colorJavascript" />
+                <DiReact className="hover:text-colorReact" />
+                <SiRedux className="hover:text-colorRedux" />
+                <FaHtml5 className="hover:text-colorHTML" />
+                <IoLogoCss3 className="hover:text-colorCSS" />
+                <FaNode className="hover:text-colorNode" />
+                <SiExpress className="hover:text-black" />
+                <BiLogoPostgresql className="hover:text-colorPostgresql" />
+                <FaGitAlt className="hover:text-colorGit" />
+                <FaGithub className="hover:text-black" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* --------- Card food. --------- */}
+        <div
+          className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
+          data-aos="fade-up"
+        >
+          {/* Icono de Henry */}
+          <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
+            <a
+              href="https://www.linkedin.com/posts/aimar-mendoza_fullstackdeveloper-graduaciaejn-desarrolloweb-activity-7113643813323075584-T4PH?utm_source=share&utm_medium=member_desktop"
+              target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <img
+                  className="w-7 h-7 rounded-full object-cover"
+                  src={HenryLogo}
+                  alt={HenryLogo}
+                  draggable="false"
+                  loading="lazy"
+                />
+              </button>
+            </a>
+            {/* Icono de GitHub */}
+            <a
+              href="https://github.com/AMendozaMarimon/API_food_Client/tree/main/Client"
+              target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <FaGithub className="w-7 h-7" />
+              </button>
+            </a>
+          </div>
+          {/* Imagen de food. */}
+          <div className="w-full h-[15rem] bg-grayMain dark:bg-gray-700 overflow-hidden">
+            <img
+              className="w-full h-full object-cover object-top"
+              src={food}
+              alt="food..."
+              draggable="false"
+              loading="lazy"
+            />
+          </div>
+          {/* Texto de food. */}
+          <div className="p-7 bg-white dark:bg-gray-800">
+            <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark">
+              {content?.cardfood.title}
+            </p>
+            <div className="flex justify-between items-center pt-6">
+              <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
+                <IoLogoJavascript className="hover:text-colorJavascript" />
+                <DiReact className="hover:text-colorReact" />
+                <SiRedux className="hover:text-colorRedux" />
+                <FaHtml5 className="hover:text-colorHTML" />
+                <IoLogoCss3 className="hover:text-colorCSS" />
+                <FaNode className="hover:text-colorNode" />
+                <SiExpress className="hover:text-black" />
+                <BiLogoPostgresql className="hover:text-colorPostgresql" />
+                <FaGitAlt className="hover:text-colorGit" />
+                <FaGithub className="hover:text-black" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* --------- Card Rick And Morty --------- */}
+        <div
+          className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
+          data-aos="fade-up"
+        >
+          {/* Icono de Henry */}
+          <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
+            <a
+              href="https://www.linkedin.com/posts/aimar-mendoza_fullstackdeveloper-graduaciaejn-desarrolloweb-activity-7113643813323075584-T4PH?utm_source=share&utm_medium=member_desktop"
+              target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <img
+                  className="w-7 h-7 rounded-full object-cover"
+                  src={HenryLogo}
+                  alt={HenryLogo}
+                  draggable="false"
+                  loading="lazy"
+                />
+              </button>
+            </a>
+            {/* Icono de GitHub */}
+            <a
+              href="https://github.com/AMendozaMarimon/RickandMortyAPI_FRONT"
+              target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <FaGithub className="w-7 h-7" />
+              </button>
+            </a>
+          </div>
+          {/* Imagen de Rick And Morty */}
+          <div className="w-full h-[15rem] bg-grayMain dark:bg-gray-700 overflow-hidden">
+            <img
+              className="w-full h-full object-cover object-top"
+              src={RaM}
+              alt="RaM..."
+              draggable="false"
+              loading="lazy"
+            />
+          </div>
+          {/* Texto de Rick And Morty */}
+          <div className="p-7 bg-white dark:bg-gray-800">
+            <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark">
+              {content?.cardRaM.title}
+            </p>
+            <div className="flex justify-between items-center pt-6">
+              <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
+                <IoLogoJavascript className="hover:text-colorJavascript" />
+                <DiReact className="hover:text-colorReact" />
+                <SiRedux className="hover:text-colorRedux" />
+                <FaHtml5 className="hover:text-colorHTML" />
+                <IoLogoCss3 className="hover:text-colorCSS" />
+                <FaNode className="hover:text-colorNode" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* --------- Card Antiguo Portafolio --------- */}
+        <div
+          className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
+          data-aos="fade-up"
+        >
+          {/* Icono de Henry */}
+          <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
+            <a
+              href="https://www.linkedin.com/posts/aimar-mendoza_fullstackdeveloper-graduaciaejn-desarrolloweb-activity-7113643813323075584-T4PH?utm_source=share&utm_medium=member_desktop"
+              target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <img
+                  className="w-7 h-7 rounded-full object-cover"
+                  src={HenryLogo}
+                  alt={HenryLogo}
+                  draggable="false"
+                  loading="lazy"
+                />
+              </button>
+            </a>
+            {/* Icono de GitHub */}
+            <a
+              href="https://github.com/AMendozaMarimon/My-Portfolio"
+              target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <FaGithub className="w-7 h-7" />
+              </button>
+            </a>
+          </div>
+          {/* Imagen de Antiguo Portafolio */}
+          <div className="w-full h-[15rem] bg-grayMain dark:bg-gray-700 overflow-hidden">
+            <img
+              className="w-full h-full object-cover object-top"
+              src={Ant_Port}
+              alt="Antigua..."
+              draggable="false"
+              loading="lazy"
+            />
+          </div>
+          {/* Texto de Antiguo Portafolio */}
+          <div className="p-7 bg-white dark:bg-gray-800">
+            <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark">
+              {content?.cardOldP.title}
+            </p>
+            <div className="flex justify-between items-center pt-6">
+              <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
+                <IoLogoJavascript className="hover:text-colorJavascript" />
+                <DiReact className="hover:text-colorReact" />
+                <SiRedux className="hover:text-colorRedux" />
+                <FaHtml5 className="hover:text-colorHTML" />
+                <IoLogoCss3 className="hover:text-colorCSS" />
+                <FaNode className="hover:text-colorNode" />
+              </div>
+              {/* Boton de reedirigir */}
+              <a href="https://aimar-mendoza.netlify.app/" target="_blank">
+                <button className="bg-white p-2 rounded-full border-2 border-black transition duration-300 ease-in-out hover:bg-orangeBoton dark:border-orangeBoton dark:bg-gray-700 dark:hover:bg-orangeBoton dark:text-white dark:hover:text-gray-800">
+                  <MdOutlineArrowOutward className="text-2xl" />
+                </button>
+              </a>
             </div>
           </div>
         </div>

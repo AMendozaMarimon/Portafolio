@@ -8,6 +8,26 @@ interface Content {
   cardCongress: {
     title: string;
   };
+  cardNewP: {
+    title: string;
+    state: string;
+  }
+  cardCatBio: {
+    title: string;
+    inProcess: string;
+  };
+  cardVehi: {
+    title: string;
+  };
+  cardfood: {
+    title: string;
+  };
+  cardRaM: {
+    title: string;
+  };
+  cardOldP: {
+    title: string;
+  };
 }
 
 // Define los tipos para los textos de contenido
@@ -28,7 +48,27 @@ const ContentTexts: ContentTextsType = {
       "With one year of experience, I have participated in various business and personal projects, applying and expanding my technical skills. In the business field, I have collaborated in the development of web applications, process optimization and project management, always focused on meeting and exceeding client objectives.",
     cardCongress: {
       title: "1st International Congress of Environmental Organizations",
-    }
+    },
+    cardNewP: {
+      title: "New Portfolio",
+      state: "New",
+    },
+    cardCatBio: {
+      title: "Biodiversity Catalog",
+      inProcess: "In Development",
+    },
+    cardVehi: {
+      title: "E-Commerce VehiBuy",
+    },
+    cardfood: {
+      title: "food.",
+    },
+    cardRaM: {
+      title: "Rick And Morty API",
+    },
+    cardOldP: {
+      title: "Old Portfolio",
+    },
   },
   ES: {
     title: {
@@ -38,8 +78,28 @@ const ContentTexts: ContentTextsType = {
     description:
       "Con un año de experiencia, he participado en diversos proyectos empresariales y personales, aplicando y expandiendo mis habilidades técnicas. En el ámbito empresarial, he colaborado en el desarrollo de aplicaciones web, la optimización de procesos y la gestión de proyectos, siempre enfocado en cumplir y superar los objetivos de los clientes.",
     cardCongress: {
-      title: "1er Congreso Internacional de Organizaciones de Ambiente"
-    }
+      title: "1er Congreso Internacional de Organizaciones de Ambiente",
+    },
+    cardNewP: {
+      title: "Nuevo Portafolio",
+      state: "Nuevo",
+    },
+    cardCatBio: {
+      title: "Catálogo de Biodiversidad",
+      inProcess: "En Desarrollo",
+    },
+    cardVehi: {
+      title: "E-Commerce VehiBuy",
+    },
+    cardfood: {
+      title: "food.",
+    },
+    cardRaM: {
+      title: "Rick and Morty API",
+    },
+    cardOldP: {
+      title: "Portafolio Antiguo",
+    },
   },
 };
 

@@ -4,6 +4,7 @@ import { DonwloadPDFNotification } from "../../assets/alerts/alerts";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
 import img from "../../assets/imgs/lineS.webp";
 import Cv from "../../assets/Cv/Aimar_FD_CV.pdf";
 import ContentTexts from "./contentTexts";
@@ -25,7 +26,11 @@ export default function About() {
   const content = ContentTexts[idiom];
 
   return (
-    <section className={`w-full h-auto flex flex-col lg:flex-row items-center justify-center px-11 py-32 md:px-24 lg:justify-between gap-20  ${darkMode ? "dark" : ""} dark:bg-gray-800 transition-colors duration-200`}>
+    <section
+      className={`w-full h-auto flex flex-col lg:flex-row items-center justify-center px-11 py-32 md:px-24 lg:justify-between gap-20  ${
+        darkMode ? "dark" : ""
+      } dark:bg-gray-800 transition-colors duration-200`}
+    >
       {/* Contenido */}
       <div className="w-full lg:w-1/2">
         {/* Nombre */}
@@ -47,7 +52,7 @@ export default function About() {
           <a href={Cv} target="_blank" download={DonwloadPDFNotification}>
             <button className="flex items-center justify-center gap-3 border-2 border-black font-telegraf text-lg font-bold px-5 py-2 rounded-full transition-colors hover:bg-orangeBoton hover:animate-spin dark:bg-gray-700 dark:border-textDark dark:text-textDark">
               <>
-                <GrDownload className="dark:text-textDark"/>
+                <GrDownload className="dark:text-textDark" />
                 {content?.textDownload}
               </>
             </button>
@@ -77,6 +82,16 @@ export default function About() {
             <>
               <FaWhatsapp className="text-3xl" />
               <div className="absolute top-0 right-0 w-2 h-2 rounded-full bg-colorWhatsApp animate-ping"></div>
+            </>
+          </a>
+          <a
+            href="mailto:mendozzaaymar02@gmail.com"
+            target="blank"
+            className="relative transition-colors transition-transform duration-300 hover:text-colorGmail hover:scale-125"
+          >
+            <>
+              <BiLogoGmail className="text-3xl" />
+              <div className="absolute top-0 right-0 w-2 h-2 rounded-full bg-colorGmail animate-ping"></div>
             </>
           </a>
         </div>
