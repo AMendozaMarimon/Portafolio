@@ -56,7 +56,7 @@ export default function Projects() {
           </span>
         </h2>
         {/* Descripción */}
-        <p className="font-garet text-lg text-justify dark:text-white">
+        <p className="font-garet text-lg dark:text-white">
           {content?.description}
         </p>
       </div>
@@ -96,8 +96,8 @@ export default function Projects() {
             <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark">
               {content?.cardCongress.title}
             </p>
-            <div className="flex justify-between items-center pt-5">
-              <div className="flex justify-center items-center gap-3 text-2xl text-grayText dark:gray-700">
+            <div className="flex justify-between gap-2 lg:gap-0 items-center pt-5">
+              <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
                 <BiLogoTypescript className="hover:text-colorTypescript" />
                 <DiReact className="hover:text-colorReact" />
                 <FaHtml5 className="hover:text-colorHTML" />
@@ -150,8 +150,8 @@ export default function Projects() {
             <div className="w-2 h-2 rounded-full bg-colorWhatsApp animate-ping"></div>
               {content?.cardNewP.state}
             </p>
-            <div className="flex justify-between items-center pt-5">
-              <div className="flex justify-center items-center gap-3 text-2xl text-grayText dark:gray-700">
+            <div className="flex justify-between gap-2 lg:gap-0 pt-5">
+              <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
                 <BiLogoTypescript className="hover:text-colorTypescript" />
                 <DiReact className="hover:text-colorReact" />
                 <SiRedux className="hover:text-colorRedux" />
@@ -208,8 +208,8 @@ export default function Projects() {
               <BsFillLightningChargeFill />
               {content?.cardCatBio.inProcess}
             </p>
-            <div className="flex justify-between items-center pt-6">
-              <div className="flex justify-center items-center gap-3 text-2xl text-grayText dark:gray-700">
+            <div className="flex justify-between gap-2 lg:gap-0 pt-5">
+              <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
                 <BiLogoTypescript className="hover:text-colorTypescript" />
                 <DiReact className="hover:text-colorReact" />
                 <SiRedux className="hover:text-colorRedux" />
@@ -273,7 +273,7 @@ export default function Projects() {
             <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark">
               {content?.cardVehi.title}
             </p>
-            <div className="flex justify-between items-center pt-6">
+            <div className="flex justify-between gap-2 lg:gap-0 pt-5">
               <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
                 <IoLogoJavascript className="hover:text-colorJavascript" />
                 <DiReact className="hover:text-colorReact" />
@@ -440,7 +440,7 @@ export default function Projects() {
             <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark">
               {content?.cardOldP.title}
             </p>
-            <div className="flex justify-between items-center pt-6">
+            <div className="flex justify-between gap-2 lg:gap-0 pt-5">
               <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
                 <IoLogoJavascript className="hover:text-colorJavascript" />
                 <DiReact className="hover:text-colorReact" />

@@ -44,7 +44,7 @@ export default function About() {
           {content?.text}
         </p>
         {/* Descripción */}
-        <p className="font-garet text-justify text-lg mb-12 dark:text-white">
+        <p className="font-garet text-lg mb-12 dark:text-white">
           {content?.text2}
         </p>
         {/* Botón de Curriculum */}
