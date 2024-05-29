@@ -50,7 +50,7 @@ export default function About() {
         {/* Botón de Curriculum */}
         <div className="flex items-center justify-center lg:justify-start mb-20">
           <a href={Cv} target="_blank" download={DonwloadPDFNotification}>
-            <button className="flex items-center justify-center gap-3 border-2 border-black font-telegraf text-lg font-bold px-5 py-2 rounded-full transition-colors hover:bg-orangeBoton hover:animate-spin dark:bg-gray-700 dark:border-textDark dark:text-textDark">
+            <button className="flex items-center justify-center gap-3 border-2 border-black font-telegraf text-lg font-bold px-5 py-2 rounded-full transition-colors  shadow-lg shadow-orangeBoton dark:shadow-textDark hover:bg-orangeBoton hover:animate-spin dark:bg-gray-700 dark:border-textDark dark:text-textDark">
               <>
                 <GrDownload className="dark:text-textDark" />
                 {content?.textDownload}
