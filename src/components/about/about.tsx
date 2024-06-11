@@ -6,7 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import img from "../../assets/imgs/lineS.webp";
-import Cv from "../../assets/Cv/Aimar_FD_CV.pdf";
+import Cv from "../../assets/Cv/Aimar_Mendoza_CV.pdf";
 import ContentTexts from "./contentTexts";
 
 // Define el tipo del estado
