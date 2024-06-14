@@ -41,8 +41,8 @@ interface ContentTextsType {
 const ContentTexts: ContentTextsType = {
   EN: {
     title: {
-      first: "My",
-      second: "Projects",
+      first: "Experience",
+      second: "Professional",
     },
     description:
       "With one year of experience, I have participated in various business and personal projects, applying and expanding my technical skills. In the business field, I have collaborated in the development of web applications, process optimization and project management, always focused on meeting and exceeding client objectives.",
@@ -72,8 +72,8 @@ const ContentTexts: ContentTextsType = {
   },
   ES: {
     title: {
-      first: "Mis",
-      second: "Proyectos",
+      first: "Experiencia",
+      second: "Profesional",
     },
     description:
       "Con un año de experiencia, he participado en diversos proyectos empresariales y personales, aplicando y expandiendo mis habilidades técnicas. En el ámbito empresarial, he colaborado en el desarrollo de aplicaciones web, la optimización de procesos y la gestión de proyectos, siempre enfocado en cumplir y superar los objetivos de los clientes.",
