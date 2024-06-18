@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import ContentTexts from "./contentTexts";
 import Congress from "../../assets/imgs/Congress.webp";
+import Choco from "../../assets/imgs/Choco.webp";
+import LaChoco from "../../assets/imgs/LaChoco.webp";
 import AwaqLogo from "../../assets/imgs/AwaqLogo.webp";
 import HenryLogo from "../../assets/imgs/Henry.webp";
 import CatBio from "../../assets/imgs/CatBio.webp";
@@ -114,6 +116,67 @@ export default function Projects() {
             </div>
           </div>
         </div>
+        {/* --------- Card Nuevo Chocolate --------- */}
+        <div
+          className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
+          data-aos="fade-up"
+        >
+          {/* Icono de GitHub */}
+          <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
+            <a
+              // href="https://github.com/AMendozaMarimon/Portafolio"
+              // target="_blank"
+            >
+              <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
+                <img
+                  className="w-7 h-7 rounded-full object-cover"
+                  src={LaChoco}
+                  alt={LaChoco}
+                  draggable="false"
+                  loading="lazy"
+                />{" "}
+              </button>
+            </a>
+          </div>
+          {/* Imagen de Chocolate */}
+          <div className="w-full h-[15rem] bg-grayMain dark:bg-gray-700 overflow-hidden">
+            <img
+              className="w-full h-full object-cover object-top"
+              src={Choco}
+              alt="Choco..."
+              draggable="false"
+              loading="lazy"
+            />
+          </div>
+          {/* Texto de Chocolate */}
+          <div className="p-7 bg-white dark:bg-gray-800">
+            <p className="font-telegraf text-grayText text-xl text-balance lg:text-left dark:text-textDark pb-5">
+              {content?.LaChoco.title}
+            </p>
+            {/* Alerta de Estado */}
+            <p className="flex items-center gap-2 font-garet font-bold italic text-pinkMain dark:text-orangeBoton">
+              <div className="w-2 h-2 rounded-full bg-pinkMain animate-ping"></div>
+              {content?.LaChoco.state}
+            </p>
+            <div className="flex justify-between gap-2 lg:gap-0 pt-5">
+              <div className="flex flex-wrap items-center gap-3 text-2xl text-grayText dark:gray-700">
+                <BiLogoTypescript className="hover:text-colorTypescript" />
+                <DiReact className="hover:text-colorReact" />
+                <SiRedux className="hover:text-colorRedux" />
+                <FaHtml5 className="hover:text-colorHTML" />
+                <RiTailwindCssFill className="hover:text-colorTailwind" />
+                <FaGitAlt className="hover:text-colorGit" />
+                <FaGithub className="hover:text-black" />
+              </div>
+              {/* Boton de reedirigir */}
+              {/* <a href="https://congreso.somosawaq.org/" target="_blank">
+                <button className="bg-white p-2 rounded-full border-2 border-black transition duration-300 ease-in-out hover:bg-orangeBoton dark:border-orangeBoton dark:bg-gray-700 dark:hover:bg-orangeBoton dark:text-white dark:hover:text-gray-800">
+                  <MdOutlineArrowOutward className="text-2xl" />
+                </button>
+              </a> */}
+            </div>
+          </div>
+        </div>
         {/* --------- Card Nuevo Portafolio --------- */}
         <div
           className="w-full lg:w-3/4 h-auto rounded-lg shadow-md overflow-hidden"
@@ -147,7 +210,7 @@ export default function Projects() {
             </p>
             {/* Alerta de Estado */}
             <p className="flex items-center gap-2 font-garet font-bold italic text-colorWhatsApp">
-            <div className="w-2 h-2 rounded-full bg-colorWhatsApp animate-ping"></div>
+              <div className="w-2 h-2 rounded-full bg-colorWhatsApp animate-ping"></div>
               {content?.cardNewP.state}
             </p>
             <div className="flex justify-between gap-2 lg:gap-0 pt-5">

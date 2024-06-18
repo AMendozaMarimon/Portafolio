@@ -8,6 +8,10 @@ interface Content {
   cardCongress: {
     title: string;
   };
+  LaChoco: {
+    title: string;
+    state: string;
+  };
   cardNewP: {
     title: string;
     state: string;
@@ -49,6 +53,10 @@ const ContentTexts: ContentTextsType = {
     cardCongress: {
       title: "1st International Congress of Environmental Organizations",
     },
+    LaChoco: {
+      title: "La Choco Latera",
+      state: "In Development",
+    },
     cardNewP: {
       title: "New Portfolio",
       state: "New",
@@ -79,6 +87,10 @@ const ContentTexts: ContentTextsType = {
       "Con un año de experiencia, he participado en diversos proyectos empresariales y personales, aplicando y expandiendo mis habilidades técnicas. En el ámbito empresarial, he colaborado en el desarrollo de aplicaciones web, la optimización de procesos y la gestión de proyectos, siempre enfocado en cumplir y superar los objetivos de los clientes.",
     cardCongress: {
       title: "1er Congreso Internacional de Organizaciones de Ambiente",
+    },
+    LaChoco: {
+      title: "La Choco Latera",
+      state: "En Desarrollo",
     },
     cardNewP: {
       title: "Nuevo Portafolio",
