@@ -124,8 +124,8 @@ export default function Projects() {
           {/* Icono de GitHub */}
           <div className="flex flex-col gap-3 absolute z-10 top-4 right-4">
             <a
-              // href="https://github.com/AMendozaMarimon/Portafolio"
-              // target="_blank"
+            // href="https://github.com/AMendozaMarimon/Portafolio"
+            // target="_blank"
             >
               <button className="bg-white p-1 rounded-full shadow-lg transition duration-300 ease-in-out hover:scale-125">
                 <img
@@ -155,7 +155,7 @@ export default function Projects() {
             </p>
             {/* Alerta de Estado */}
             <p className="flex items-center gap-2 font-garet font-bold italic text-pinkMain dark:text-orangeBoton">
-              <div className="w-2 h-2 rounded-full bg-pinkMain animate-ping"></div>
+              <BsFillLightningChargeFill />
               {content?.LaChoco.state}
             </p>
             <div className="flex justify-between gap-2 lg:gap-0 pt-5">
